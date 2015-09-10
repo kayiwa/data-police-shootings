@@ -1,0 +1,30 @@
+kibana:
+
+  build: ./kibana
+  restart: always
+  hostname: kibana
+  ports:
+    - "5601"
+  links:
+    - "elasticsearch:elasticsearch"
+
+elasticsearch:
+
+  build: ./elasticsearch
+  restart: always
+  hostname: elasticsearch
+  ports:
+    - "9200"
+    - "9300"
+  volumes:
+    - "/Users/kayiwa/policeshootingsdata:/data"
+
+logstash:
+
+  build: ./logstash
+  restart: always
+  hostname: logstash
+  volumes:
+    - "/Users/kayiwa/policeshootingsdata:/data"
+  links:
+    - "elasticsearch:elasticsearch"
