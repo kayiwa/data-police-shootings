@@ -30,3 +30,6 @@ ADD elasticsearch.yml /elasticsearch/config/elasticsearch.yml
 # Expose ports
 EXPOSE 9200
 EXPOSE 9300
+
+# Default command
+CMD ["/elasticsearch/bin/elasticsearch"]
