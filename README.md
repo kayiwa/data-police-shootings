@@ -1,3 +1,25 @@
+# Clone this repo first.
+
+This repo expects you to have Docker and Docker-Compose to get it working.
+
+You will need to edit the `setup_dirs.sh` to match the path that will store your elasticsearch data
+
+Run the `generate_certs.sh` script and feel free to use a test.demo.example.org or an equivalent type name.
+
+You can now run `docker-compose up`
+
+If you encounter no errors. Stop the containers by running CTRL+C
+
+You can then run `docker-compose up -d`
+
+You can find the port of your kibana container by running `docker ps`
+
+running `docker-machine ls` will give you the IP of the container.
+
+the URI of your kibana would be http://{IPaddress}:{port}
+
+
+
 [This data is published under an [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license](https://creativecommons.org/licenses/by-nc-sa/4.0/)]
 
 # About this story
