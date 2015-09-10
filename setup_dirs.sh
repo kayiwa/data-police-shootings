@@ -3,9 +3,9 @@
 set -e
 
 # Create data dir
-if [ ! -d /home/kayiwa/accessyyzdata ] ; then
+if [ ! -d /Users/kayiwa/policeshootingsdata ] ; then
     echo "Creating /data directory"
-    mkdir -p /home/kayiwa/accessyyzdata
+    mkdir -p /Users/kayiwa/policeshootingsdata
 else
     echo "Directory already exists!"
 fi
