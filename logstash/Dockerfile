@@ -25,6 +25,8 @@ COPY logstash-forwarder.crt /etc/logstash/logstash-forwarder.crt
 # Copy the config files.
 COPY server.conf /etc/logstash/server.conf
 
+COPY fatal-police-shootings-data.csv /tmp/fatal-police-shootings-data.csv
+
 # lumberjack port
 #EXPOSE 4545
 
