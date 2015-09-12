@@ -5,12 +5,15 @@ ENV LOGSTASH_VER 1.5.4
 ENV LS_HEAP_SIZE=2g
 WORKDIR /opt
 
+# add openjdk repository
+RUN add-apt-repository ppa:openjdk-r/ppa
+
 # Dependencies
 RUN apt-get update -qq && \
  apt-get install -y -qq \
  wget \
  python \
- openjdk-7-jre-headless
+ openjdk-8-jdk
 
 # Install Logstash
 RUN wget --quiet "https://download.elasticsearch.org/logstash/logstash/logstash-$LOGSTASH_VER.tar.gz" -O "/opt/logstash-$LOGSTASH_VER.tar.gz" --no-check-certificate && \

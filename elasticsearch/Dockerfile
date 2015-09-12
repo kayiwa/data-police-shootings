@@ -5,12 +5,15 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV ES_PKG_NAME elasticsearch-1.7.1
 #ENV ES_HEAP_SIZE=8g
 
+# add openjdk repository
+RUN add-apt-repository ppa:openjdk-r/ppa
+
 # Install dependencies
 RUN apt-get update -qq && \
   apt-get install -y -qq \
   wget \
   python \
-  openjdk-7-jre-headless
+  openjdk-8-jdk
 
 # Install ElasticSearch
 RUN \
