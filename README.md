@@ -1,8 +1,11 @@
-# Clone this repo first.
+# About this Repo
+This repo takes the Washington Post (see below) police shooting data and allows you to visualize the data using the ELK stack
 
-This repo expects you to have Docker and Docker-Compose to get it working.
+## Clone this repo first.
 
-You will need to edit the `setup_dirs.sh` to match the path that will store your elasticsearch data
+This repo expects you to have [Docker](https://www.docker.com) and [Docker-Compose](https://docs.docker.com/compose/) to get it working.
+
+You will need to edit the `setup_dirs.sh` to match the path that will store your elasticsearch data. In the example the user is on Mac OSX so adjust it accordingly
 
 Run the `generate_certs.sh` script and feel free to use a test.demo.example.org or an equivalent type name.
 
