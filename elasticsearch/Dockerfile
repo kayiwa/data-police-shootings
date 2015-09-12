@@ -25,7 +25,7 @@ RUN \
 #RUN /elasticsearch/bin/plugin -i elasticsearch/shield/latest
 
 # Config
-ADD elasticsearch.yml /elasticsearch/config/elasticsearch.yml
+COPY elasticsearch.yml /elasticsearch/config/elasticsearch.yml
 
 # Expose ports
 EXPOSE 9200
